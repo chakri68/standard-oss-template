@@ -1,11 +1,13 @@
 // .eslintrc.js
 module.exports = {
-  extends: [
-    "eslint:recommended",
-    "plugin:prettier/recommended", // Use this to disable ESLint rules that conflict with Prettier
-  ],
-  plugins: ["prettier"],
+  env: {
+    browser: true,
+    node: true,
+    es2021: true,
+  },
+  extends: ["eslint:recommended", "plugin:prettier/recommended"],
   rules: {
-    // You can add your specific ESLint rules here if needed
+    // You can add custom rules here
+    "prettier/prettier": ["error", { usePrettierrc: true }],
   },
 };
